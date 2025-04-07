@@ -46,32 +46,29 @@ public class DriverManager {
         WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
 
-		Map<String, Object> prefs = new HashMap<>();
+		Map<String, Object> preferences = new HashMap<>();
 
 		// Disable password manager & address save prompt
-		prefs.put("credentials_enable_service", false);
-		prefs.put("profile.password_manager_enabled", false);
+		preferences.put("credentials_enable_service", false);
+		preferences.put("profile.password_manager_enabled", false);
 
 		// Disable autofill (addresses, phone numbers, etc.)
-		prefs.put("autofill.profile_enabled", false);
-		prefs.put("autofill.enabled", false);
+		preferences.put("autofill.profile_enabled", false);
+		preferences.put("autofill.enabled", false);
 
-		options.setExperimentalOption("prefs", prefs);
+		options.setExperimentalOption("prefs", preferences);
 
-		RemoteWebDriver driver = new ChromeDriver(options);
-        return driver;
+        return new ChromeDriver(options);
     }
 	
 	public static WebDriver getFirefoxDriver() {
         WebDriverManager.firefoxdriver().setup();
-        RemoteWebDriver driver=new FirefoxDriver(); 
-        return driver;
+        return new FirefoxDriver();
     }
 	
 	public static WebDriver getEdgeDriver() {
         WebDriverManager.edgedriver().setup();
-        RemoteWebDriver driver=new EdgeDriver(); 
-        return driver;
+        return new EdgeDriver();
     }
 	
 }
