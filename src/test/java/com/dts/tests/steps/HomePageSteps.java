@@ -16,11 +16,11 @@ public class HomePageSteps extends CommonSteps {
 	public void i_am_navigated_to_home_page() {
 		homePage.gotoHomePage();
 	}
+
 	@When("I click on registration")
 	public void i_click_on_registration() {
 		homePage.clickOnRegisterLink();
 	}
-
 
 	@When("I logout from the application")
 	public void iLogoutFromTheApplication() {

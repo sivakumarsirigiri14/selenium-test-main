@@ -17,7 +17,6 @@ public class RegistrationSteps extends CommonSteps {
 		 userName = registrationPage.registerUser();
 	}
 
-
 	@Then("I should see user registration successful")
 	public void iShouldSeeUserRegistrationSuccessful() {
 		assertEquals("Welcome "+ userName, registrationPage.getCreatedUserText());

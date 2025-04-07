@@ -1,7 +1,6 @@
 @regression
 Feature: Creating User Registration
 
-
   Scenario: user registration
     Given I am navigated to home page
     When I click on registration

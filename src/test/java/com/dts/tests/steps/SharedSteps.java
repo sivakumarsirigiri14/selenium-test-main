@@ -22,7 +22,7 @@ public class SharedSteps extends CommonSteps {
 		} catch (WebDriverException wde) {
 			System.err.println(wde.getMessage());
 		} catch (Exception e) {
-			e.printStackTrace();
+			e.fillInStackTrace();
 		}
 		driver.close();
 		driver = null;
