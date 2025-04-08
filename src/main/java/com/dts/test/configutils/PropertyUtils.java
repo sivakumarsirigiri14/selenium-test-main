@@ -1,7 +1,6 @@
 package com.dts.test.configutils;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -16,7 +15,6 @@ public class PropertyUtils{
     	if(prop == null){
 	    	try {
 	    		String res = new File("").getAbsolutePath() + File.separatorChar + "src//test//resources" + File.separatorChar + "test.properties";
-//	    		InputStream input = new FileInputStream(res);
 				InputStream input = Files.newInputStream(Paths.get(res));
 	    		prop = new Properties();
 	    		prop.load(input);
